@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Solat Sunat Selepas/Sebelum Solat Fardhu</title>
+ <style>
+  body
+    {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #EBE2B8;
+    }
+    h1{color: #333;}
+    p{font-size: 18px;color: #666;}
+    .styled-button:hover
+    {
+      background-color: #0056b3;
+    }
+    .sgtdigalakkan
+    {
+        background-color: lightgreen;
+    }
+    .digalakkan
+    {
+        background-color: lightyellow;
+    }
+    .dilarang
+    {
+        background-color: lightpink;
+    }
+    .solat
+    {
+        font-weight: bold;
+    }
+    th
+    {
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    td
+    {
+        border: 3px solid black;
+        border-radius: 15px;
+    }
+    table
+    {
+        border: 4px solid black;
+        border-radius: 10px;
+    }
+    .circle
+    {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+    .circle-green
+    {
+        background-color: lightgreen;
+    }
+    .circle-yellow
+    {
+        background-color: lightyellow;
+    }
+    .circle-pink
+    {
+        background-color: lightpink;
+    }
+ </style>
+</head>
+
+<body>
+
+ <h1>Solat Sunat Rawatib</h1>
+ <p><q>Barang siapa yang menjaga <b>12 rakaat solat sunat </b>dalam sehari semalam, maka Allah akan membangunkan untuknya <b>sebuah rumah di syurga</b>, iaitu: 4 rakaat sebelum Zuhur, 2 rakaat selepas Zuhur, 2 rakaat selepas Maghrib, 2 rakaat selepas Isyak, dan 2 rakaat sebelum Subuh.</q>
+  <br>
+  <cite>(Hadis Riwayat al-Tirmizi)</cite>
+ </p>
+ <table width=100% cellpadding=5px>
+  <tr>
+   <th>SOLAT FARDHU</th>
+   <th>SOLAT SUNAT QABLIAH (Sebelum)</th>
+   <th>SOLAT SUNAT BA'DIAH (Selepas)</th>
+  </tr>
+  <tr>
+   <td class="solat" data-info="NIAT SOLAT FARDHU SUBUH: \n\nSahaja aku solat fardhu Subuh 2 rakaat kerana Allah Ta'ala">SUBUH</td>
+   <td class="sgtdigalakkan" data-info="NIAT SOLAT SUNAT SEBELUM SUBUH: \n\nSahaja aku solat sunat sebelum Subuh 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+   <td class="dilarang">TIADA</td>
+  </tr>
+  <tr>
+   <td class="solat" data-info="NIAT SOLAT FARDHU ZUHUR: \n\nSahaja aku solat fardhu Zuhur 4 rakaat kerana Allah Ta'ala">ZUHUR</td>
+   <td class="sgtdigalakkan" data-info="NIAT SOLAT SUNAT SEBELUM ZUHUR: \n\nSahaja aku solat sunat sebelum Zuhur 4 rakaat kerana Allah Ta'ala">4 RAKAAT</td>
+   <td class="sgtdigalakkan" data-info="NIAT SOLAT SUNAT SELEPAS ZUHUR: \n\nSahaja aku solat sunat selepas Zuhur 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+  </tr>
+  <tr>
+   <td class="solat" data-info="NIAT SOLAT FARDHU ASAR: \n\nSahaja aku solat fardhu Asar 4 rakaat kerana Allah Ta'ala">ASAR</td>
+   <td class="digalakkan" data-info="NIAT SOLAT SUNAT SEBELUM ASAR: \n\nSahaja aku solat sunat sebelum Asar 4 rakaat kerana Allah Ta'ala">4 RAKAAT</td>
+   <td class="dilarang">TIADA</td>
+  </tr>
+  <tr>
+   <td class="solat" data-info="NIAT SOLAT FARDHU MAGHRIB: \n\nSahaja aku solat fardhu Maghrib 3 rakaat kerana Allah Ta'ala">MAGHRIB</td>
+   <td class="digalakkan" data-info="NIAT SOLAT SUNAT SEBELUM MAGHRIB: \n\nSahaja aku solat sunat sebelum Maghrib 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+   <td class="sgtdigalakkan" data-info="NIAT SOLAT SUNAT SELEPAS MAGHRIB: \n\nSahaja aku solat sunat selepas Maghrib 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+  </tr>
+  <tr>
+   <td class="solat" data-info="NIAT SOLAT FARDHU ISYAK: \n\nSahaja aku solat fardhu Isyak 4 rakaat kerana Allah Ta'ala">ISYAK</td>
+   <td class="digalakkan" data-info="NIAT SOLAT SUNAT SEBELUM ISYAK: \n\nSahaja aku solat sunat sebelum Isyak 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+   <td class="sgtdigalakkan" data-info="NIAT SOLAT SUNAT SELEPAS ISYAK: \n\nSahaja aku solat sunat selepas Isyak 2 rakaat kerana Allah Ta'ala">2 RAKAAT</td>
+  </tr>
+ </table><br>
+ <span class="circle circle-green"></span> Sangat digalakkan
+ <span class="circle circle-yellow"></span> Digalakkan
+ <span class="circle circle-pink"></span> Dilarang
+ <script>
+  const cells = document.querySelectorAll("td");
+
+    cells.forEach(cell => {
+      cell.addEventListener("click", function () {
+        const info = this.getAttribute("data-info");
+        alert(info.replace(/\\n/g, "\n"));
+      });
+    });
+ </script>
+</body>
+
+</html>
